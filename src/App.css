@@ -12,7 +12,9 @@
   --color-light: #b3b3b3;
   --color-dark: #0a0c11;
   --color-darker: #052228;
-  --color-tri: #07373f;
+  --color-vdark: #02191d;
+
+  --color-tri: #08252b;
   /* progess bar */
   /* --color-progressInner: #0e464f; */
   --color-progressOuter: #24a0b5;
@@ -27,3 +29,16 @@
   font-family: JejuMyeongjo;
   src: url("./assets/JejuMyeongjo-Regular.ttf");
 }
+
+/* to remove input deafult caret */
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* Firefox */
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */

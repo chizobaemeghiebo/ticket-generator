@@ -25,7 +25,7 @@ const Nav = () => {
         </ul>
         <Link
           to="/"
-          className="flex items-center gap-2 bg-white text-dark font-accent px-6 py-4 rounded-xl uppercase text-base"
+          className="flex items-center gap-2 bg-white text-dark font-accent lg:px-6 px-3 py-4 rounded-xl uppercase text-sm lg:text-base"
         >
           My Tickets
           <span>
