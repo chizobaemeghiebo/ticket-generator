@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --font-heading: "Road Rage", "sans-serif";
+  --font-accent: "JejuMyeongjo", "serif";
+  --font-display: "Roboto", "sans-serif";
+  /* colors */
+  --color-border: #197686;
+  --color-border2: #0e464f;
+  --color-border3: #07373f;
+  --color-bg-darker: #041e23;
+  --color-light: #b3b3b3;
+  --color-dark: #0a0c11;
+  --color-darker: #052228;
+  --color-tri: #07373f;
+  /* progess bar */
+  /* --color-progressInner: #0e464f; */
+  --color-progressOuter: #24a0b5;
+  /* white variants */
+  --color-lighter: #fafafa;
+  --color-midLight: #d9d9d9;
+
+  /* --my-gradient: "background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;"; */
+}
+
+@font-face {
+  font-family: JejuMyeongjo;
+  src: url("./assets/JejuMyeongjo-Regular.ttf");
+}
