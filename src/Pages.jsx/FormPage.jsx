@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Layout from "../components/Layout";
 import LayoutInner from "../components/LayoutInner";
@@ -5,7 +6,6 @@ import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Download from "../assets/images/download.png";
 import Envelope from "../assets/images/envelope.png";
-import ButtonContainer from "../components/ButtonContainer";
 
 const FormPage = () => {
   return (
@@ -85,9 +85,28 @@ const FormPage = () => {
                   className="font-display border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
                 ></textarea>
               </label>
-              {/* <button type="submit"></button> */}
-              <ButtonContainer button1="Back" button2="Get My Free Ticket" />
+
+              <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2">
+                <Link
+                  to="/"
+                  className=" lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
+                >
+                  Back
+                </Link>
+
+                <button
+                  type="submit"
+                  className=" lg:w-[47%] border-2 border-progressOuter bg-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
+                >
+                  Get My free Ticket
+                </button>
+              </div>
             </form>
+            {/* <ButtonContainer
+              button1="Back"
+              button2="Get My Free Ticket"
+              to="/new-ticket"
+            /> */}
           </div>
         </LayoutInner>
       </Layout>

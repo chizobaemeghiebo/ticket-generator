@@ -9,7 +9,7 @@ const Main = () => {
       {/* page title and progress bar */}
       <PageTitle />
       <ProgressBar />
-      <div className="bg-transparent border border-border2 rounded-4xl flex flex-col p-6 mt-8">
+      <div className="bg-transparent lg:border border-border2 rounded-4xl flex flex-col lg:p-6 mt-8">
         {/* progress bar */}
 
         {/* Main Head Section */}
