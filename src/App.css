@@ -22,6 +22,11 @@
   --color-lighter: #fafafa;
   --color-midLight: #d9d9d9;
 
+  /* border page2 */
+
+  --color-border5: rgba(36, 160, 181, 0.5);
+  --color-border4: #24a0b5;
+
   /* --my-gradient: "background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;"; */
 }
 

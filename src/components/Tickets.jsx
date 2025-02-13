@@ -1,10 +1,10 @@
 import Card from "./Card";
-import Button from "./Button";
+import ButtonContainer from "./ButtonContainer";
 import CaretDown from "../assets/images/caret-down.png";
 
 const Tickets = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-8">
       <h3 className="mb-2 text-base text-lighter font-display">
         Select Ticket Type:
       </h3>
@@ -41,10 +41,7 @@ const Tickets = () => {
         {/* TODO: WORK ON THIS LATER */}
         {/* <img src={CaretDown} alt="caret" /> */}
 
-        <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 mt-8">
-          <Button>Cancel</Button>
-          <Button bg="bg-progressOuter">Next</Button>
-        </div>
+        <ButtonContainer />
       </div>
     </div>
   );
