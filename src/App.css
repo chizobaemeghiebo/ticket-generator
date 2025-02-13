@@ -35,15 +35,14 @@
   src: url("./assets/JejuMyeongjo-Regular.ttf");
 }
 
-/* to remove input deafult caret */
-/* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+/* to remove select default caret */
+/* chrome, firefox */
+select {
   -webkit-appearance: none;
-  margin: 0;
-} */
+  -moz-appearance: none;
+}
 
-/* Firefox */
-/* input[type=number] {
-  -moz-appearance: textfield;
-} */
+/* internet explorer */
+select::-ms-expand {
+  display: none;
+}

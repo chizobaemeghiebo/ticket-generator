@@ -15,7 +15,7 @@ const FormPage = () => {
 
       {/* styles from main */}
       <Layout>
-        <PageTitle />
+        <PageTitle title="Attendee Details" step="Step 2/3" />
         <ProgressBar width="w-[66%]" />
         <LayoutInner>
           <div className="border-b-4 border-border3 pb-8">

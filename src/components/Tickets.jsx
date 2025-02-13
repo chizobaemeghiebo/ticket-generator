@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Card from "./Card";
+import Button from "./Button";
 import ButtonContainer from "./ButtonContainer";
 import CaretDown from "../assets/images/caret-down.png";
 
@@ -26,23 +28,35 @@ const Tickets = () => {
         </Card>
       </div>
 
-      <div className="mt-8">
-        <label className="block mb-2 text-base text-lighter font-display">
-          Number of Tickets:{" "}
+      <form action="" className="mt-8">
+        <label
+          htmlFor="numberOfTickets"
+          className="block mb-2 text-base text-lighter font-display"
+        >
+          Number of Tickets:
         </label>
 
-        <input
-          type="number"
-          name="ticketNumber"
-          id="ticketNumber"
-          placeholder="1"
-          className="border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
-        />
-        {/* TODO: WORK ON THIS LATER */}
-        {/* <img src={CaretDown} alt="caret" /> */}
-
+        <select
+          name="numberOfTickets"
+          id="numberOfTickets"
+          required
+          className=" relative border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
+        >
+          <option value="1">1</option>
+          <option value="2" className="text-dark">
+            2
+          </option>
+          <option value="3" className="text-dark">
+            3
+          </option>
+          <option value="4" className="text-dark">
+            4
+          </option>
+          <img src={CaretDown} className="" alt="choose" />
+        </select>
+        {/* TODO: FIX THE LOGIC HERE */}
         <ButtonContainer />
-      </div>
+      </form>
     </div>
   );
 };
