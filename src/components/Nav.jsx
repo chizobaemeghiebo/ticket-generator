@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 import arrowRight from "../assets/images/arrow-right.png";
 const Nav = () => {
   return (
-    <nav className="py-6">
+    <nav className="py-6 relative z-50">
       <div className="container bg-transparent max-w-[1200px] w-[90%] mx-auto flex items-center justify-between px-4 py-3 border-2 border-border rounded-3xl">
         <img src={logo} alt="logo image" />
         <ul className="hidden lg:flex lg:items-center lg:justify-around lg:gap-4">

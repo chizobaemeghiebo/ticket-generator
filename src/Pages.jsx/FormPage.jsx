@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import Button from "../components/Button";
 import Layout from "../components/Layout";
 import LayoutInner from "../components/LayoutInner";
 import PageTitle from "../components/PageTitle";
@@ -86,7 +87,16 @@ const FormPage = () => {
                 ></textarea>
               </label>
 
-              <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2">
+              <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
+                <Button color="text-border4" pathname="/">
+                  Back
+                </Button>
+                <Button pathname="/ticket" bg="bg-progressOuter">
+                  Get My Free Ticket
+                </Button>
+              </div>
+
+              {/* <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2">
                 <Link
                   to="/"
                   className=" lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
@@ -100,7 +110,7 @@ const FormPage = () => {
                 >
                   Get My free Ticket
                 </button>
-              </div>
+              </div> */}
             </form>
             {/* <ButtonContainer
               button1="Back"

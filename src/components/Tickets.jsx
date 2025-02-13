@@ -55,7 +55,14 @@ const Tickets = () => {
           <img src={CaretDown} className="" alt="choose" />
         </select>
         {/* TODO: FIX THE LOGIC HERE */}
-        <ButtonContainer />
+        <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
+          <Button color="text-border4" pathname="/">
+            Cancel
+          </Button>
+          <Button pathname="/get-tickets" bg="bg-progressOuter">
+            Next
+          </Button>
+        </div>
       </form>
     </div>
   );
