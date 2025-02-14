@@ -44,23 +44,23 @@ const TicketPage = ({
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">
             <div className="p-2 border-b-2 border-r-2 border-border3 ">
               <p className="opacity-30 text-xs">Enter your name</p>
-              <p className="opacity-30 text-xs">{name}</p>
+              <p className=" text-[10px]">{name}</p>
             </div>
             <div className="p-2 opacity-30 text-xs border-b-2  border-border3 ">
               <p className="opacity-30 text-xs">Enter your email *</p>
-              <p className="opacity-30 text-xs">{email}</p>
+              <p className=" text-[10px]">{email}</p>
             </div>
             <div className="p-2 opacity-30 text-xs border-b-2 border-r-2 border-border3 ">
               <p className="opacity-30 text-xs"> Ticket Type:</p>
-              <p className="opacity-30 text-xs">{ticketType}</p>
+              <p className=" text-[10px]">{ticketType}</p>
             </div>
             <div className="p-2 opacity-30 text-xs border-b-2 border-border3 ">
               <p className="opacity-30 text-xs"> Ticket for :</p>
-              <p className="opacity-30 text-xs">{ticketNumber}</p>
+              <p className=" text-[10px]">{ticketNumber}</p>
             </div>
             <div className="col-span-2 p-2 opacity-30 text-xs ">
               <p className="opacity-30 text-xs">Special request?</p>
-              <p className="opacity-30 text-xs">{message}</p>
+              <p className=" text-[10px]">{message}</p>
             </div>
           </div>
         </div>
