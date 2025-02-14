@@ -5,7 +5,14 @@ import ProgressBar from "../components/ProgressBar";
 import Barcode from "../assets/images/barcode1.png";
 import Ticket1 from "../assets/images/ticket.png";
 import Button from "../components/Button";
-const TicketPage = ({ name, email, message, ticketNumber, prevStep }) => {
+const TicketPage = ({
+  name,
+  email,
+  message,
+  ticketNumber,
+  prevStep,
+  ticketType,
+}) => {
   return (
     <Layout>
       <PageTitle title="Ready" step="Step 3/3" />
@@ -43,7 +50,7 @@ const TicketPage = ({ name, email, message, ticketNumber, prevStep }) => {
             </div>
             <div className="p-2 opacity-30 text-xs border-b-2 border-r-2 border-border3 ">
               <p className="opacity-30 text-xs"> Ticket Type:</p>
-              <p className="opacity-30 text-xs"> Ticket Type:</p>
+              <p className="opacity-30 text-xs">{ticketType}</p>
             </div>
             <div className="p-2 opacity-30 text-xs border-b-2 border-border3 ">
               <p className="opacity-30 text-xs"> Ticket for :</p>

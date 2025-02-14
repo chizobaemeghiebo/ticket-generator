@@ -19,10 +19,8 @@ const FormPage = ({ formData, handleChange, handleSubmit, prevStep }) => {
           <div className="bg-darker px-6 py-7 lg:px-6 lg:py-12 border-2 border-border3 rounded-3xl relative">
             <h3 className="text-lighter text-base">Upload Profile Photo</h3>
             <div className="hidden lg:flex  w-[90%] bg-black opacity-20 h-[180px] absolute top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
-            <div className="border-4 border-border4 bg-border5 flex lg:justify-center rounded-3xl lg:py-8 mt-3 lg:max-w-[50%] lg:mx-auto z-9999 relative">
-              <div className="flex flex-col gap-4 p-6 items-center justify-center ">
-                <Upload />
-              </div>
+            <div className="border-4 border-border4 bg-border5 flex p-6 mx-auto  justify-center rounded-3xl lg:py-8 mt-3 max-w-[50%] lg:mx-auto z-9999 relative">
+              <Upload />
             </div>
           </div>
         </div>
@@ -105,17 +103,7 @@ const FormPage = ({ formData, handleChange, handleSubmit, prevStep }) => {
               >
                 Back
               </button>
-              {/* <Button onClick={prevStep}>Cancel</Button> */}
             </div>
-
-            {/* <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
-              <Button color="text-border4" pathname="/">
-                Back
-              </Button>
-              <Button pathname="/ticket" bg="bg-progressOuter">
-                Get My Free Ticket
-              </Button>
-            </div> */}
           </form>
         </div>
       </LayoutInner>

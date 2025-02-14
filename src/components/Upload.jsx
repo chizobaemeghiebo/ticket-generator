@@ -51,7 +51,7 @@ const Upload = () => {
         className="relative flex flex-col items-center gap-2"
       >
         <img src={Download} alt="Upload file" />
-        <p className="text-lighter font-display text-base text-center md:w-3/4 md:mx-auto">
+        <p className="text-lighter font-display text-base text-center">
           Drag & drop or click to upload
         </p>
         <input

@@ -43,13 +43,14 @@ const HomePage = ({
           <div className="flex flex-col lg:flex-row bg-darker p-4 gap-3 rounded-3xl justify-between">
             <label htmlFor="free">
               <input
-                className=""
+                className="absolute hidden"
                 type="radio"
                 name="ticketType"
                 id="free"
                 value="free"
                 onChange={handleChecked}
               />
+              {/* TODO: ADD HOVER STYLES, CHANGE STYLE ON IS CHECKED  */}
               <Card>
                 <h4 className="text-white text-2xl">Free</h4>
                 <p className="text-lighter text-lg uppercase">Regular Access</p>
@@ -58,7 +59,7 @@ const HomePage = ({
             </label>
             <label htmlFor="vip">
               <input
-                className=""
+                className="absolute hidden"
                 type="radio"
                 name="vip"
                 id="vip"
@@ -73,7 +74,7 @@ const HomePage = ({
             </label>
             <label htmlFor="vvip">
               <input
-                className=""
+                className="absolute hidden"
                 type="radio"
                 name="vvip"
                 id="vvip"
@@ -87,7 +88,7 @@ const HomePage = ({
               </Card>
             </label>
           </div>
-          <div className="relative">
+          <div className="relative mt-8">
             <label
               htmlFor="numberOfTickets"
               className="block mb-2 text-base text-lighter font-display"
