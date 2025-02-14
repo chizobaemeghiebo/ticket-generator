@@ -5,8 +5,14 @@ import LayoutInner from "../components/LayoutInner";
 import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Envelope from "../assets/images/envelope.png";
-import Upload from "../components/Upload";
-const FormPage = ({ formData, handleChange, handleSubmit, prevStep }) => {
+import Download from "../assets/images/download.png";
+const FormPage = ({
+  formData,
+  handleChange,
+  handleSubmit,
+  prevStep,
+  handleImage,
+}) => {
   return (
     // TODO: FIX GRADIENT BACKGROUND
     // <div className="min-h-screen bg-vdark">
@@ -20,7 +26,25 @@ const FormPage = ({ formData, handleChange, handleSubmit, prevStep }) => {
             <h3 className="text-lighter text-base">Upload Profile Photo</h3>
             <div className="hidden lg:flex  w-[90%] bg-black opacity-20 h-[180px] absolute top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
             <div className="border-4 border-border4 bg-border5 flex p-6 mx-auto  justify-center rounded-3xl lg:py-8 mt-3 max-w-[50%] lg:mx-auto z-9999 relative">
-              <Upload />
+              <form>
+                <label
+                  htmlFor="upload"
+                  className="relative flex flex-col items-center gap-2"
+                >
+                  <img src={Download} alt="Upload file" />
+                  <p className="text-lighter font-display text-base text-center">
+                    Drag & drop or click to upload
+                  </p>
+                  <input
+                    type="file"
+                    name="upload"
+                    id="upload"
+                    className="absolute hidden"
+                    accept="image/jpeg, image/png"
+                    onChange={handleImage}
+                  />
+                </label>
+              </form>
             </div>
           </div>
         </div>

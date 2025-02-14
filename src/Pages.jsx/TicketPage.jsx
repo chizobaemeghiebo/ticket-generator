@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useNavigation } from "react-router-dom";
 import Layout from "../components/Layout";
 import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Barcode from "../assets/images/barcode1.png";
 import Ticket1 from "../assets/images/ticket.png";
-import Button from "../components/Button";
+import Upload from "../components/Upload";
 const TicketPage = ({
   name,
   email,
@@ -12,6 +13,7 @@ const TicketPage = ({
   ticketNumber,
   prevStep,
   ticketType,
+  imageSrc,
 }) => {
   return (
     <Layout>
@@ -36,7 +38,7 @@ const TicketPage = ({
           </div>
           {/* image holder */}
           <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-amber-200">
-            {/* <img src={} alt="" /> */}
+            {imageSrc && <img src={imageSrc} alt="your image" />}
           </div>
           {/* information */}
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">

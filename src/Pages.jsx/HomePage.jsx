@@ -12,8 +12,6 @@ const HomePage = ({
   handleChange,
   handleChecked,
   handleSubmitTicket,
-  ticketType,
-  checked,
 }) => {
   return (
     <div className="bg-transparent w-[90%] shadow-md max-w-[700px] mx-auto p-5 lg:p-12 rounded-[40px] border-2 border-border2">

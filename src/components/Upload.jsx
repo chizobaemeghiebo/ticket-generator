@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Download from "../assets/images/download.png";
 
-const Upload = () => {
-  const [uploadedImgState, setUploadedImgState] = useState();
+const Upload = ({ img }) => {
+  const [uploadedImgState, setUploadedImgState] = useState("");
 
   const handleImage = async (e) => {
     e.preventDefault();
@@ -35,7 +35,8 @@ const Upload = () => {
         // access your URL with secure_url
         console.log(data.secure_url);
         // setImg(data.secure_url);
-        setUploadedImgState(data.secure_url);
+        img = data.secure_url;
+        // setUploadedImgState(data.secure_url);
       } catch (error) {
         console.error(error);
       }
