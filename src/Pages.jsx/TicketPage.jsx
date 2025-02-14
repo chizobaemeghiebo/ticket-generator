@@ -38,7 +38,7 @@ const TicketPage = ({
           </div>
           {/* image holder */}
           <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-amber-200">
-            {imageSrc && <img src={imageSrc} alt="your image" />}
+            <img src={imageSrc} alt="" />
           </div>
           {/* information */}
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">
@@ -68,16 +68,16 @@ const TicketPage = ({
         <img
           src={Ticket1}
           alt="ticket background"
-          className="flex absolute -top-4 md:top-[62%] lg:top-[63%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-10"
+          className="flex absolute -top-6 md:top-[62%] lg:top-[63%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 z-10"
         />
         <img
           src={Barcode}
           alt="barcode"
-          className="absolute -bottom-[30%] md:-bottom-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          className="absolute -bottom-[35%] md:-bottom-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
         />
       </div>
 
-      <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
+      <div className="mt-44 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
         <button
           // onClick={nextStep}
           className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
