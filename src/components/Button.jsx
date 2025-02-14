@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Button = ({
-  pathname = "/get-tickets",
+  pathname = "",
   children,
   bg = "bg-transparent",
   color = "text-lighter",
