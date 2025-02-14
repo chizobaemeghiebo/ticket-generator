@@ -38,7 +38,7 @@ const TicketPage = ({
           </div>
           {/* image holder */}
           <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-amber-200">
-            <img src={imageSrc} alt="" />
+            <img src={imageSrc} alt="Ticket Image" />
           </div>
           {/* information */}
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">
