@@ -38,7 +38,7 @@ const TicketPage = ({
             <p className="font-display text-xs ">📅 March 15, 2025 | 7:00 PM</p>
           </div>
           {/* image holder */}
-          <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-border2">
+          <div className="relative overflow-hidden z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-border2">
             <img
               src={imageSrc}
               alt="downloaded img"
