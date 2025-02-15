@@ -42,7 +42,7 @@ const HomePage = ({
             <label
               htmlFor="free"
               className={
-                checkedButton === "free"
+                checkedButton === "Free"
                   ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
                   : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%] hover:bg-border3"
               }
@@ -52,7 +52,8 @@ const HomePage = ({
                 type="button"
                 name="ticketType"
                 id="free"
-                value="free"
+                value="Free"
+                aria-describedby="Free ticket"
                 onClick={handleChecked}
               />
               {/* TODO: ADD HOVER STYLES, CHANGE STYLE ON IS CHECKED  */}
@@ -67,7 +68,7 @@ const HomePage = ({
             <label
               htmlFor="vip"
               className={
-                checkedButton === "vip"
+                checkedButton === "VIP"
                   ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
                   : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%] hover:bg-border3"
               }
@@ -77,7 +78,8 @@ const HomePage = ({
                 type="button"
                 name="vip"
                 id="vip"
-                value="vip"
+                value="VIP"
+                aria-describedby="VIP ticket"
                 onClick={handleChecked}
                 // onClick={() => setCheckedButton("vip")}
               />
@@ -100,7 +102,8 @@ const HomePage = ({
                 type="button"
                 name="vvip"
                 id="vvip"
-                value="vvip"
+                value="VVIP"
+                aria-describedby="VVIP ticket"
                 onClick={handleChecked}
                 // onClick={() => setCheckedButton("vvip")}
               />
@@ -123,10 +126,11 @@ const HomePage = ({
               id="numberOfTickets"
               required
               value={formData.tickets}
+              aria-describedby="Select number of tickets"
               onChange={handleChange}
               className=" relative border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
             >
-              <option value="" className="text-dark">
+              <option value="1" className="text-dark">
                 1
               </option>
               <option value="2" className="text-dark">

@@ -62,6 +62,7 @@ const FormPage = ({
                 id="username"
                 required
                 value={formData.username}
+                aria-labelledby="your name"
                 // onChange={(e) => formData.setUsername(e.target.value)}
                 onChange={handleChange}
                 // onChange={(e) => setUsername(e.target.value)}
@@ -82,6 +83,7 @@ const FormPage = ({
                 required
                 value={formData.email}
                 onChange={handleChange}
+                aria-labelledby="your email"
                 // onChange={(e) => setEmail(e.target.value)}
                 placeholder="hello@avioflagos.io"
                 className="pl-10 font-display border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
@@ -107,6 +109,7 @@ const FormPage = ({
                 required
                 value={formData.message}
                 onChange={handleChange}
+                aria-labelledby="leave a message"
                 // onChange={(e) => setMessage((message = e.target.value))}
                 placeholder="Your message"
                 className="font-display border-2 border-border3 p-3 w-full rounded-xl text-white focus:ring-2 focus:ring-border3 outline-0 placeholder-white"
