@@ -39,7 +39,11 @@ const TicketPage = ({
           </div>
           {/* image holder */}
           <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-border2">
-            <img src={imageSrc} alt="" />
+            <img
+              src={imageSrc}
+              alt="downloaded img"
+              className="absolute top-0 left-0 right-0- bottom-0 w-full"
+            />
           </div>
           {/* information */}
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">

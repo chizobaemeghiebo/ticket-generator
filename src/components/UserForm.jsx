@@ -11,6 +11,7 @@ const UserForm = ({ userData }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [step, setStep] = useState(1);
+  const [isChecked, setIsChecked] = useState(false);
 
   // image
   const [uploadedImgState, setUploadedImgState] = useState("");
@@ -68,6 +69,7 @@ const UserForm = ({ userData }) => {
     message,
     ticketType,
     uploadedImgState,
+    isChecked,
     // step,
   };
 
@@ -92,13 +94,15 @@ const UserForm = ({ userData }) => {
   };
   const handleChecked = (e) => {
     setTicketType(e.target.value);
+    setIsChecked(!isChecked);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     nextStep();
-    console.log(values);
-    console.log(ticketType);
+    // console.log(values);
+    // console.log(ticketType);
+    // console.log(isChecked);
   };
 
   const nextStep = () => {

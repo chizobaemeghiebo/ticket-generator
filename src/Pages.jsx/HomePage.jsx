@@ -12,6 +12,7 @@ const HomePage = ({
   handleChange,
   handleChecked,
   handleSubmitTicket,
+  checked,
 }) => {
   return (
     <div className="bg-transparent w-[90%] shadow-md max-w-[700px] mx-auto p-5 lg:p-12 rounded-[40px] border-2 border-border2">
@@ -41,7 +42,11 @@ const HomePage = ({
           <div className="flex flex-col lg:flex-row bg-bg-darker p-4 gap-3 rounded-3xl justify-between">
             <label
               htmlFor="free"
-              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              className={
+                checked
+                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              }
             >
               <input
                 className="absolute hidden"
@@ -62,7 +67,11 @@ const HomePage = ({
             </label>
             <label
               htmlFor="vip"
-              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              className={
+                checked
+                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              }
             >
               <input
                 className="absolute hidden"
@@ -80,7 +89,11 @@ const HomePage = ({
             </label>
             <label
               htmlFor="vvip"
-              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              className={
+                checked
+                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+              }
             >
               <input
                 className="absolute hidden"
