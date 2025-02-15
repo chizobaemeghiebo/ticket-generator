@@ -16,28 +16,7 @@ const TicketPage = ({
   imageSrc,
   handleDownload,
 }) => {
-  // const pdfRef = createRef();
-
-  // const download = () => {
-  //   import("html2canvas")
-  //     .then((html2canvas) => {
-  //       html2canvas(pdfRef.current).then((canvas) => {
-  //         const dataUrl = canvas.toDataURL("image/png");
-  //         const link = document.createElement("a");
-  //         link.href = dataUrl;
-  //         link.download = "ticket.png";
-  //         document.body.appendChild(link);
-  //         link.click();
-  //         document.body.removeChild(link);
-  //         console.log(dataUrl);
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.error("oops, something went wrong!", error);
-  //     });
-  // };
-
-  // Create a reference to the element you want to capture
+  // Create a reference to the element being captured
   const captureRef = useRef();
 
   const download = () => {
@@ -55,11 +34,6 @@ const TicketPage = ({
       link.click();
       document.body.removeChild(link);
       console.log(dataUrl);
-      // const img = new Image();
-      // img.src = imageUrl;
-
-      // // You can append the image to the DOM or log it
-      // document.body.appendChild(img);
     });
   };
   return (
