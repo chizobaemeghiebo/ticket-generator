@@ -10,7 +10,8 @@ const UserForm = ({ userData }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [step, setStep] = useState(1);
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
+  const [checkedButton, setCheckedButton] = useState(null);
 
   // image
   const [uploadedImgState, setUploadedImgState] = useState("");
@@ -62,7 +63,8 @@ const UserForm = ({ userData }) => {
     message,
     ticketType,
     uploadedImgState,
-    isChecked,
+    // isChecked,
+    checkedButton,
     // step,
   };
 
@@ -86,14 +88,23 @@ const UserForm = ({ userData }) => {
     }
   };
 
-  // const toggleChecked = () => {
-  //   setIsChecked(!isChecked);
-  // };
-
-  // const handleChecked = (e) => {
-  //   setTicketType(e.target.value);
-  //   toggleChecked();
-  // };
+  const handleChecked = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "free":
+        setCheckedButton(value);
+        setTicketType(value);
+        break;
+      case "vip":
+        setCheckedButton(value);
+        setTicketType(value);
+        break;
+      case "vvip":
+        setCheckedButton(value);
+        setTicketType(value);
+        break;
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -122,9 +133,9 @@ const UserForm = ({ userData }) => {
         <HomePage
           formData={values.tickets}
           handleChange={handleChange}
-          // handleChecked={handleChecked}
+          checkedButton={checkedButton}
           handleSubmitTicket={handleSubmit}
-          // checked={values.isChecked}
+          handleChecked={handleChecked}
           nextStep={nextStep}
           ticketType={values.ticketType}
         />

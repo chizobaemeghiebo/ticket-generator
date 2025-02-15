@@ -7,9 +7,13 @@ import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Card from "../components/Card";
 
-const HomePage = ({ formData, handleChange, handleSubmitTicket }) => {
-  const [checkedButton, setCheckedButton] = useState(null);
-
+const HomePage = ({
+  formData,
+  handleChange,
+  handleSubmitTicket,
+  checkedButton,
+  handleChecked,
+}) => {
   return (
     <div className="bg-transparent w-[90%] shadow-md max-w-[700px] mx-auto p-5 lg:p-12 rounded-[40px] border-2 border-border2">
       {/* page title and progress bar */}
@@ -49,8 +53,8 @@ const HomePage = ({ formData, handleChange, handleSubmitTicket }) => {
                 type="button"
                 name="ticketType"
                 id="free"
-                value={formData.ticketType}
-                onClick={() => setCheckedButton("free")}
+                value="free"
+                onClick={handleChecked}
               />
               {/* TODO: ADD HOVER STYLES, CHANGE STYLE ON IS CHECKED  */}
               <div>
@@ -74,7 +78,9 @@ const HomePage = ({ formData, handleChange, handleSubmitTicket }) => {
                 type="button"
                 name="vip"
                 id="vip"
-                value={formData.ticketType}                onClick={() => setCheckedButton("vip")}
+                value="vip"
+                onClick={handleChecked}
+                // onClick={() => setCheckedButton("vip")}
               />
               <div>
                 <h4 className="text-white text-2xl">$150</h4>
@@ -95,8 +101,9 @@ const HomePage = ({ formData, handleChange, handleSubmitTicket }) => {
                 type="button"
                 name="vvip"
                 id="vvip"
-                value={formData.ticketType}
-                onClick={() => setCheckedButton("vvip")}
+                value="vvip"
+                onClick={handleChecked}
+                // onClick={() => setCheckedButton("vvip")}
               />
               <div>
                 <h4 className="text-white text-2xl">$200</h4>
