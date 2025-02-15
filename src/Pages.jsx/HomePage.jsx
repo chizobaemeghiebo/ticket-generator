@@ -14,6 +14,8 @@ const HomePage = ({
   handleSubmitTicket,
   checked,
 }) => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div className="bg-transparent w-[90%] shadow-md max-w-[700px] mx-auto p-5 lg:p-12 rounded-[40px] border-2 border-border2">
       {/* page title and progress bar */}
@@ -44,8 +46,8 @@ const HomePage = ({
               htmlFor="free"
               className={
                 checked
-                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
               }
             >
               <input
@@ -69,8 +71,8 @@ const HomePage = ({
               htmlFor="vip"
               className={
                 checked
-                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
               }
             >
               <input
@@ -91,8 +93,8 @@ const HomePage = ({
               htmlFor="vvip"
               className={
                 checked
-                  ? "bg-ldark border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
               }
             >
               <input

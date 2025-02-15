@@ -103,6 +103,7 @@ const FormPage = ({
                 type="text"
                 name="message"
                 id="message"
+                maxLength={30}
                 required
                 value={formData.message}
                 onChange={handleChange}
