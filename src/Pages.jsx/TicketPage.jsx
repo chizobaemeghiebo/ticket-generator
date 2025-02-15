@@ -29,7 +29,7 @@ const TicketPage = ({
       </div>
 
       <div className="relative">
-        <div className="relative z-30 flex flex-col gap-4 border-2 border-border4 rounded-2xl mt-12 w-[83%] md:w-[40%] lg:w-[43%] mx-auto py-2">
+        <div className="relative z-30 flex flex-col gap-4 border-2 border-border4 rounded-2xl mt-12 w-[83%] md:w-[40%] lg:w-[43%] mx-auto py-2 lg:py-4">
           <div className="relative z-30 flex flex-col items-center text-lighter gap-1">
             <h1 className="font-heading text-4xl ">Techember Fest ”25</h1>
             <p className="font-display text-xs lg:text-center lg:w-[70%] lg:mx-auto">
@@ -38,7 +38,7 @@ const TicketPage = ({
             <p className="font-display text-xs ">📅 March 15, 2025 | 7:00 PM</p>
           </div>
           {/* image holder */}
-          <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-amber-200">
+          <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-border2">
             <img src={imageSrc} alt="" />
           </div>
           {/* information */}
