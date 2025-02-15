@@ -5,7 +5,6 @@ import CaretDown from "../assets/images/caret-down.png";
 import Bigcard from "../components/Bigcard";
 import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
-import Card from "../components/Card";
 
 const HomePage = ({
   formData,
