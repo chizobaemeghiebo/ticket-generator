@@ -3,11 +3,10 @@ import Nav from "./Nav";
 import HomePage from "../Pages.jsx/HomePage";
 import TicketPage from "../Pages.jsx/TicketPage";
 import FormPage from "../Pages.jsx/FormPage";
-import Upload from "./Upload";
 const UserForm = ({ userData }) => {
   const [username, setUsername] = useState("");
   const [tickets, setTickets] = useState("");
-  const [ticketType, setTicketType] = useState("");
+  const [ticketType, setTicketType] = useState("free");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [step, setStep] = useState(1);
@@ -56,12 +55,6 @@ const UserForm = ({ userData }) => {
     }
   };
 
-  const handleDownload = (e) => {
-    // e.preventDefault();
-    // const element = document.getElementById('receipt');
-    // html2pdf().from(element).set(toPdf).save();
-  };
-
   const values = {
     username,
     email,
@@ -92,17 +85,22 @@ const UserForm = ({ userData }) => {
         break;
     }
   };
-  const handleChecked = (e) => {
-    setTicketType(e.target.value);
-    setIsChecked(!isChecked);
-  };
+
+  // const toggleChecked = () => {
+  //   setIsChecked(!isChecked);
+  // };
+
+  // const handleChecked = (e) => {
+  //   setTicketType(e.target.value);
+  //   toggleChecked();
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // setTicketType()
     nextStep();
-    // console.log(values);
-    // console.log(ticketType);
-    // console.log(isChecked);
+
+    console.log(values);
   };
 
   const nextStep = () => {
@@ -124,9 +122,9 @@ const UserForm = ({ userData }) => {
         <HomePage
           formData={values.tickets}
           handleChange={handleChange}
-          handleChecked={handleChecked}
+          // handleChecked={handleChecked}
           handleSubmitTicket={handleSubmit}
-          checked={values.isChecked}
+          // checked={values.isChecked}
           nextStep={nextStep}
           ticketType={values.ticketType}
         />
@@ -152,7 +150,7 @@ const UserForm = ({ userData }) => {
           ticketNumber={values.tickets}
           message={values.message}
           imageSrc={values.uploadedImgState}
-          handleDownload={handleDownload}
+          // handleDownload={handleDownload}
         />
       )}
     </div>

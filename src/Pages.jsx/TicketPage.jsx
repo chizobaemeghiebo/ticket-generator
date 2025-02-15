@@ -5,7 +5,6 @@ import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Barcode from "../assets/images/barcode1.png";
 import Ticket1 from "../assets/images/ticket.png";
-import Upload from "../components/Upload";
 const TicketPage = ({
   name,
   email,

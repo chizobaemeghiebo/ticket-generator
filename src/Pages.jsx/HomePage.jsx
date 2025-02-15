@@ -7,14 +7,8 @@ import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Card from "../components/Card";
 
-const HomePage = ({
-  formData,
-  handleChange,
-  handleChecked,
-  handleSubmitTicket,
-  checked,
-}) => {
-  const [isActive, setIsActive] = useState(false);
+const HomePage = ({ formData, handleChange, handleSubmitTicket }) => {
+  const [checkedButton, setCheckedButton] = useState(null);
 
   return (
     <div className="bg-transparent w-[90%] shadow-md max-w-[700px] mx-auto p-5 lg:p-12 rounded-[40px] border-2 border-border2">
@@ -45,18 +39,18 @@ const HomePage = ({
             <label
               htmlFor="free"
               className={
-                checked
+                checkedButton === "free"
                   ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%] hover:bg-border3"
               }
             >
               <input
                 className="absolute hidden"
-                type="radio"
+                type="button"
                 name="ticketType"
                 id="free"
-                value="free"
-                onChange={handleChecked}
+                value={formData.ticketType}
+                onClick={() => setCheckedButton("free")}
               />
               {/* TODO: ADD HOVER STYLES, CHANGE STYLE ON IS CHECKED  */}
               <div>
@@ -70,18 +64,17 @@ const HomePage = ({
             <label
               htmlFor="vip"
               className={
-                checked
+                checkedButton === "vip"
                   ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%] hover:bg-border3"
               }
             >
               <input
                 className="absolute hidden"
-                type="radio"
+                type="button"
                 name="vip"
                 id="vip"
-                value="vip"
-                onChange={handleChecked}
+                value={formData.ticketType}                onClick={() => setCheckedButton("vip")}
               />
               <div>
                 <h4 className="text-white text-2xl">$150</h4>
@@ -92,18 +85,18 @@ const HomePage = ({
             <label
               htmlFor="vvip"
               className={
-                checked
+                checkedButton === "vvip"
                   ? "bg-border2 border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
-                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+                  : "border border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%] hover:bg-border3"
               }
             >
               <input
                 className="absolute hidden"
-                type="radio"
+                type="button"
                 name="vvip"
                 id="vvip"
-                value="vvip"
-                onChange={handleChecked}
+                value={formData.ticketType}
+                onClick={() => setCheckedButton("vvip")}
               />
               <div>
                 <h4 className="text-white text-2xl">$200</h4>
