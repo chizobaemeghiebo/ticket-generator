@@ -55,6 +55,12 @@ const UserForm = ({ userData }) => {
     }
   };
 
+  const handleDownload = (e) => {
+    // e.preventDefault();
+    // const element = document.getElementById('receipt');
+    // html2pdf().from(element).set(toPdf).save();
+  };
+
   const values = {
     username,
     email,
@@ -142,6 +148,7 @@ const UserForm = ({ userData }) => {
           ticketNumber={values.tickets}
           message={values.message}
           imageSrc={values.uploadedImgState}
+          handleDownload={handleDownload}
         />
       )}
     </div>

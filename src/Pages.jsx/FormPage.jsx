@@ -114,18 +114,18 @@ const FormPage = ({
 
             <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
               <button
-                // onClick={downloadTicket}
-                className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
-                type="submit"
-              >
-                Dowmload Ticket
-              </button>
-              <button
                 onClick={prevStep}
                 className="lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
                 type="button"
               >
                 Back
+              </button>
+              <button
+                // onClick={downloadTicket}
+                className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
+                type="submit"
+              >
+                Next
               </button>
             </div>
           </form>

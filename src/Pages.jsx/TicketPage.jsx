@@ -14,6 +14,7 @@ const TicketPage = ({
   prevStep,
   ticketType,
   imageSrc,
+  handleDownload,
 }) => {
   return (
     <Layout>
@@ -38,29 +39,29 @@ const TicketPage = ({
           </div>
           {/* image holder */}
           <div className="relative z-30 border-2 border-border3 rounded-xl w-1/2 mx-auto p-16 bg-amber-200">
-            <img src={imageSrc} alt="Ticket Image" />
+            <img src={imageSrc} alt="" />
           </div>
           {/* information */}
           <div className="relative z-30 w-[90%] mx-auto grid grid-cols-2 justify-between items-stretch px-2 border-2 border-border3 rounded-lg text-white">
             <div className="p-2 border-b-2 border-r-2 border-border3 ">
-              <p className="opacity-30 text-xs">Enter your name</p>
-              <p className=" text-[10px]">{name}</p>
+              <p className="opacity-30 text-[10px]">Enter your name</p>
+              <p className="text-xs">{name}</p>
             </div>
-            <div className="p-2 opacity-30 text-xs border-b-2  border-border3 ">
-              <p className="opacity-30 text-xs">Enter your email *</p>
-              <p className=" text-[10px]">{email}</p>
+            <div className="p-2 border-b-2  border-border3 ">
+              <p className="opacity-30 text-[10px]">Enter your email *</p>
+              <p className="text-xs">{email}</p>
             </div>
-            <div className="p-2 opacity-30 text-xs border-b-2 border-r-2 border-border3 ">
-              <p className="opacity-30 text-xs"> Ticket Type:</p>
-              <p className=" text-[10px]">{ticketType}</p>
+            <div className="p-2 border-b-2 border-r-2 border-border3 ">
+              <p className="opacity-30 text-[10px]"> Ticket Type:</p>
+              <p className=" text-xs">{ticketType}</p>
             </div>
-            <div className="p-2 opacity-30 text-xs border-b-2 border-border3 ">
-              <p className="opacity-30 text-xs"> Ticket for :</p>
-              <p className=" text-[10px]">{ticketNumber}</p>
+            <div className="p-2 border-b-2 border-border3 ">
+              <p className="opacity-30 text-[10px]"> Ticket for :</p>
+              <p className=" text-xs">{ticketNumber}</p>
             </div>
-            <div className="col-span-2 p-2 opacity-30 text-xs ">
-              <p className="opacity-30 text-xs">Special request?</p>
-              <p className=" text-[10px]">{message}</p>
+            <div className="col-span-2 p-2">
+              <p className="opacity-30 text-[10px]">Special request?</p>
+              <p className=" text-xs">{message}</p>
             </div>
           </div>
         </div>
@@ -73,18 +74,11 @@ const TicketPage = ({
         <img
           src={Barcode}
           alt="barcode"
-          className="absolute -bottom-[35%] md:-bottom-[33%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          className="absolute -bottom-[35%] md:-bottom-[33%] lg:-bottom-[38%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
         />
       </div>
 
       <div className="mt-44 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
-        <button
-          // onClick={nextStep}
-          className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
-          type="submit"
-        >
-          Next
-        </button>
         <button
           onClick={prevStep}
           className="lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
@@ -92,7 +86,14 @@ const TicketPage = ({
         >
           Back
         </button>
-        {/* <Button onClick={prevStep}>Cancel</Button> */}
+
+        <button
+          onClick={handleDownload}
+          className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
+          type="submit"
+        >
+          Download My Ticket
+        </button>
       </div>
     </Layout>
   );

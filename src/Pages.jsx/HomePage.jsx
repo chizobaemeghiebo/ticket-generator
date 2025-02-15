@@ -38,8 +38,11 @@ const HomePage = ({
         </div>
         {/* TODO: USE MAP HERE */}
         <form onSubmit={handleSubmitTicket} className="mt-8">
-          <div className="flex flex-col lg:flex-row bg-darker p-4 gap-3 rounded-3xl justify-between">
-            <label htmlFor="free">
+          <div className="flex flex-col lg:flex-row bg-bg-darker p-4 gap-3 rounded-3xl justify-between">
+            <label
+              htmlFor="free"
+              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+            >
               <input
                 className="absolute hidden"
                 type="radio"
@@ -49,13 +52,18 @@ const HomePage = ({
                 onChange={handleChecked}
               />
               {/* TODO: ADD HOVER STYLES, CHANGE STYLE ON IS CHECKED  */}
-              <Card>
+              <div>
                 <h4 className="text-white text-2xl">Free</h4>
-                <p className="text-lighter text-lg uppercase">Regular Access</p>
-                <p className="text-midLight text-sm">20/52</p>
-              </Card>
+                <p className="text-lighter text-base uppercase">
+                  Regular Access
+                </p>
+                <p className="text-midLight text-base">20/52</p>
+              </div>
             </label>
-            <label htmlFor="vip">
+            <label
+              htmlFor="vip"
+              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+            >
               <input
                 className="absolute hidden"
                 type="radio"
@@ -64,13 +72,16 @@ const HomePage = ({
                 value="vip"
                 onChange={handleChecked}
               />
-              <Card>
+              <div>
                 <h4 className="text-white text-2xl">$150</h4>
                 <p className="text-lighter text-lg uppercase">VIP Access</p>
                 <p className="text-midLight text-sm">20/52</p>
-              </Card>
+              </div>
             </label>
-            <label htmlFor="vvip">
+            <label
+              htmlFor="vvip"
+              className="border-2 border-border3 rounded-xl flex flex-col gap-3 font-display p-3 lg:w-[30%]"
+            >
               <input
                 className="absolute hidden"
                 type="radio"
@@ -79,11 +90,11 @@ const HomePage = ({
                 value="vvip"
                 onChange={handleChecked}
               />
-              <Card>
+              <div>
                 <h4 className="text-white text-2xl">$200</h4>
                 <p className="text-lighter text-lg uppercase">VVIP Access</p>
                 <p className="text-midLight text-sm">20/52</p>
-              </Card>
+              </div>
             </label>
           </div>
           <div className="relative mt-8">
@@ -125,6 +136,7 @@ const HomePage = ({
           </div>
 
           <div className="mt-8 flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-2 ">
+            <Button>Cancel</Button>
             <button
               // onClick={nextStep}
               className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
@@ -132,7 +144,6 @@ const HomePage = ({
             >
               Next
             </button>
-            <Button>Cancel</Button>
           </div>
         </form>
       </div>
