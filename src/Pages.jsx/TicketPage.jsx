@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, createRef } from "react";
 import { useNavigation } from "react-router-dom";
+// import { createRef } from "react";
+import domtoimage from "dom-to-image";
 import Layout from "../components/Layout";
 import PageTitle from "../components/PageTitle";
 import ProgressBar from "../components/ProgressBar";
 import Barcode from "../assets/images/barcode1.png";
 import Ticket1 from "../assets/images/ticket.png";
+import jsPDF from "jspdf";
 const TicketPage = ({
   name,
   email,
@@ -15,6 +18,26 @@ const TicketPage = ({
   imageSrc,
   handleDownload,
 }) => {
+  const pdfRef = createRef();
+
+  const download = () => {
+    import("html2canvas")
+      .then((html2canvas) => {
+        html2canvas.default(pdfRef.current).then((canvas) => {
+          const dataUrl = canvas.toDataURL("image/png");
+          const link = document.createElement("a");
+          link.href = dataUrl;
+          link.download = "ticket.png";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      })
+      .catch((error) => {
+        console.error("oops, something went wrong!", error);
+      });
+  };
+
   return (
     <Layout>
       <PageTitle title="Ready" step="Step 3/3" />
@@ -27,7 +50,7 @@ const TicketPage = ({
         </p>
       </div>
 
-      <div className="relative">
+      <div ref={pdfRef} className="relative">
         <div className="relative z-30 flex flex-col gap-4 border-2 border-border4 rounded-2xl mt-12 w-[83%] md:w-[40%] lg:w-[43%] mx-auto py-2 lg:py-4">
           <div className="relative z-30 flex flex-col items-center text-lighter gap-1">
             <h1 className="font-heading text-4xl ">Techember Fest ”25</h1>
@@ -91,7 +114,7 @@ const TicketPage = ({
         </button>
 
         <button
-          onClick={handleDownload}
+          onClick={download}
           className="bg-progressOuter lg:w-[47%] border-2 border-progressOuter font-accent text-base rounded-lg p-3 text-center text-lighter"
           type="submit"
         >
